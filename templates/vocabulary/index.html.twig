@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ form_start(form) }}
+    <div>Ecriture{{ form_widget(form.writing) }}</div>
+    <div>Traduction{{ form_widget(form.meaning) }}</div>
+    <div>Furigana{{ form_widget(form.furigana) }}</div>
+    <div>Niveau JLPT{{ form_widget(form.level) }}</div>
+    <button type="submit" style="margin-top: 10px" class="btn btn-dark">{{ button_label|default('Valider') }}</button>
+    {{ form_end(form) }}
+
+    <style>
+        form {
+            width: 200px;
+            margin: 20px auto 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+    </style>
+
+{% endblock %}

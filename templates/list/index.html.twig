@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ListController!{% endblock %}
+
+{% block body %}
+    {% for word in list %}
+        <div>{{ word.writing }} {{ word.meaning }} {{ word.furigana }} {{ word.level }}</div>
+    {% endfor %}
+{% endblock %}
